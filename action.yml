@@ -1,0 +1,13 @@
+name: 'Quickbase Test Action'
+description: 'Test quickbase formulas'
+
+inputs:
+  realm-hostname:
+    description: 'Realm Hostname'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.realm-hostname }}
